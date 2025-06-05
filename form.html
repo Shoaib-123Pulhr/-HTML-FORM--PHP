@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <!-- This is a student profile form for UET Lahore -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>UET Lahore - Student Application Form</title>
+    <!-- I'm loading Font Awesome from CDN but locally would be better -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+</style>
+<body>
+    <div class="form-container">
+        <header class="form-header">
+    <div class="university-logo">
+    <img src="uet1.jpg" alt="UET Logo" style="width: 100%; height: 100%; border-radius: 50%;"><br>
+       </div>
+  
+            <h1 class="form-title">University of Engineering & Technology</h1>
+            <p class="form-subtitle">Lahore - Student Application Form</p>
+        </header>
+        >
+           <form id="appForm" method="post" action="submit.php">
+            <!-- Personal Info -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-user"></i> Personal Information
+                </h2>
+                <div class="photo-preview" id="photoPreview">
+                <span><i class="fas fa-user"></i></span>
+                </div>
+                <input type="file" id="photoInput" accept="image/*" style="display:none;">
+                <button type="button" class="upload-btn" id="uploadBtn">
+                <i class="fas fa-upload"></i> Upload Photo
+                </button>
+                <table class="form-table">
+                    <tr>
+                        <td><label>Full Name</label></td>
+                        <td><input type="text" class="input-field" name="full_name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>Date of Birth</label></td>
+                        <td><input type="date" class="input-field" name="dob" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>Contact Number</label></td>
+                        <td><input type="tel" class="input-field" name="phone" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>Email Address</label></td>
+                        <td><input type="email" class="input-field" name="email" required></td>
+                    </tr>
+                </table>
+            </section>
+            
+            <!-- Family Info -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-home"></i> Family Information
+                </h2>
+                
+                <table class="form-table">
+                    <tr>
+                        <td><label>Father's Name</label></td>
+                        <td><input type="text" class="input-field" name="father_name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>Father's Occupation</label></td>
+                        <td><input type="text" class="input-field" name="father_occupation" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>Monthly Income (PKR)</label></td>
+                        <td><input type="number" class="input-field" name="income" min="0" required></td>
+                    </tr>
+                </table>
+            </section>
+            
+            <!-- Education -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-graduation-cap"></i> Educational Background
+                </h2>
+                
+                <table class="form-table">
+                    <thead>
+                        <tr>
+                            <th>Degree</th>
+                            <th>Institution</th>
+                            <th>Year</th>
+                            <th>Marks/GPA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Matriculation</td>
+                            <td><input type="text" class="input-field" name="matric_school" required></td>
+                            <td><input type="text" class="input-field" name="matric_year" required></td>
+                            <td><input type="text" class="input-field" name="matric_marks" required></td>
+                        </tr>
+                        <tr>
+                            <td>Intermediate</td>
+                            <td><input type="text" class="input-field" name="inter_college" required></td>
+                            <td><input type="text" class="input-field" name="inter_year" required></td>
+                            <td><input type="text" class="input-field" name="inter_marks" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- Program Selection -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-book"></i> Program Selection
+                </h2>
+                
+                <table class="form-table">
+                    <thead>
+                        <tr>
+                            <th>Preference</th>
+                            <th>Program</th>
+                            <th>Department</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>First Choice</td>
+                            <td>
+                                <select class="input-field" name="first_program" required>
+                                    <option value="">-- Select --</option>
+                                    <option value="bs">BS</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="input-field" name="first_dept" required>
+                                    <option value="">-- Select --</option>
+                                    <option value="cs">Computer Science</option>
+                                    <option value="ee">Electrical Eng.</option>
+                                    <option value="me">Mechanical Eng.</option>
+                                    <option value="ai">Artificial Engineering</option>
+                                    <option value="CE">Civil Engineering</option>
+                                    <option value="ME">Mechatronics Engineering</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Second Choice</td>
+                            <td>
+                                <select class="input-field" name="second_program">
+                                    <option value="">-- Select --</option>
+                                    <option value="bs">BS</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="input-field" name="second_dept">
+                                    <option value="">-- Select --</option>
+                                    <option value="cs">Computer Science</option>
+                                    <option value="ai">Artificial Engineering</option>
+                                    <option value="CE">Civil Engineering</option>
+                                    <option value="ME">Mechatronics Engineering</option>
+                                    <option value="ee">Electrical Eng.</option>
+                                    <option value="me">Mechanical Eng.</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- Personal Statement -->
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-edit"></i> Personal Statement
+                </h2>
+                
+                <div style="margin-top:15px;">
+                    <textarea class="input-field" name="statement" placeholder="Tell us about yourself and why you want to join UET..." required></textarea>
+                </div>
+            </section>
+            
+            <!-- Form Submission -->
+            <div class="submit-section">
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Submit Application
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    const photoPreview = document.getElementById('photoPreview');
+    const photoInput = document.getElementById('photoInput');
+    const uploadBtn = document.getElementById('uploadBtn');
+
+    uploadBtn.addEventListener('click', () => photoInput.click());
+
+    photoInput.addEventListener('change', handleImage);
+
+    photoPreview.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        photoPreview.style.borderColor = '#8b0000';
+    });
+
+    photoPreview.addEventListener('dragleave', () => {
+        photoPreview.style.borderColor = '#d4af37';
+    });
+
+    photoPreview.addEventListener('drop', (e) => {
+        e.preventDefault();
+        photoPreview.style.borderColor = '#d4af37';
+        const file = e.dataTransfer.files[0];
+        if (file && file.type.startsWith('image/')) {
+            previewImage(file);
+        }
+    });
+
+    function handleImage(e) {
+        const file = e.target.files[0];
+        if (file && file.type.startsWith('image/')) {
+            previewImage(file);
+        }
+    }
+
+    function previewImage(file) {
+        const reader = new FileReader();
+        reader.onload = () => {
+            photoPreview.innerHTML = `<img src="${reader.result}" style="width:100%; height:100%; border-radius: 50%;">`;
+        };
+        reader.readAsDataURL(file);
+    }
+</script>
+
+</html>
